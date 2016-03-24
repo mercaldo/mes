@@ -68,7 +68,7 @@ mes <- function(dat, N, seed=1, ix=FALSE, hx=FALSE) {
   out <- data.frame('original'=counts, 'sampled'=sample_obs)
   colnames(out) <- c('strata','freq','mes')
   
-  attr(out, 'totals') <- data.frame('total'=sum(counts),'N'=N, 'mvs'= sum(sample_obs))
+  attr(out, 'totals') <- data.frame('total'=sum(counts),'N'=N, 'mes'= sum(sample_obs))
   attr(out,'entropy') <- data.frame('max_entropy'=log2(sum(counts>0)), 'rs_entropy'=H.se(counts), 'mes_entropy'=H.se(sample_obs))
     
   if(ix) {
@@ -78,7 +78,7 @@ mes <- function(dat, N, seed=1, ix=FALSE, hx=FALSE) {
     tmp    <- vector('list',length(dat2_s))
     for(jx in seq(tmp)) {
       if(length(dat2_s[[jx]])==1) dat2_s[[jx]] <- rep(dat2_s[[jx]],2)
-      tmp[[jx]] <- data.frame(out$strata[jx], sort(sample(dat2_s[[jx]], out$mvs[jx], replace=FALSE)))
+      tmp[[jx]] <- data.frame(out$strata[jx], sort(sample(dat2_s[[jx]], out$mes[jx], replace=FALSE)))
     }
     samp_ix <- do.call(rbind, tmp)
     colnames(samp_ix) <- c('strata','ix')
