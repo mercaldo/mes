@@ -1,0 +1,9 @@
+Package: mes
+Type: Package
+Title: Maximum Entropy Sampling
+Version: 1.0
+Date: 2016-03-06
+Author: Nathaniel Mercaldo
+Maintainer: Nathaniel Mercaldo <nate.mercaldo@vanderbilt.edu>
+Description: Generates frequencies to obtain maximum entropy sample (MES). If data vector is provided, then indicies of MES sample may be returned. As an index of qualitative variation, Shannon entropy measures are returned for the random and maximum entropy samples.
+License: MIT
