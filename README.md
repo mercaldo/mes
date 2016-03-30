@@ -7,7 +7,7 @@ library(devtools)
 install_github('mercaldo/mes')
 library(mes)
 ```
-##### Example
+##### R Example
 ```r
 set.seed(1) 
 dat <- rpois(1000, lambda=1)
@@ -53,3 +53,5 @@ cbind(ix[1:10,],ix[11:20,],ix[21:30,],ix[31:40,],ix[41:50,])
 ## 9       0 951      1 911      2 832      3 808      6 780
 ## 10      0 999      1 979      3 194      4  18      7 989
 ```
+
+##### Detailed Example of MES Algorithm
