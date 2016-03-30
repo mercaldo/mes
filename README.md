@@ -16,13 +16,12 @@ table(dat)
 Suppose it is of interest to obtain an MES sample of size 50
 ```r
 (out <- mes(dat, N=50, seed=1, ix=TRUE))
+##   strata freq mes
+##1       0  364  10
+##2       1  378  10
+##3       2  164   9
+##4       3   72  10
+##5       4   20   9
+##6       6    1   1
+##7       7    1   1
 ```
-| strata | freq | mes  |
-| -------|:----:| ----:|
-| 0      | 364  | 10   |
-| 1      | 378  | 10   |
-| 2      | 164  | 9    |
-| 3      | 72   | 10   |
-| 4      | 20   | 9    |
-| 6      | 1    | 1    |
-| 7      | 1    | 1    |
