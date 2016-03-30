@@ -12,10 +12,15 @@ library(mes)
 set.seed(1) 
 dat <- rpois(1000, lambda=1)
 table(dat)
+
+## dat
+##   0   1   2  3  4 6 7 
+## 364 378 164 72 20 1 1
 ```
 Suppose it is of interest to obtain an MES sample of size 50
 ```r
 (out <- mes(dat, N=50, seed=1, ix=TRUE))
+
 ##   strata freq mes
 ##1       0  364  10
 ##2       1  378  10
