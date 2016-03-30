@@ -30,3 +30,4 @@ Suppose it is of interest to obtain an MES sample of size 50
 ##6       6    1   1
 ##7       7    1   1
 ```
+The mes column of the out object summarizes the frequencies to sample such that the overall entropy (Shannon's information or diversity index) is maximized. Random sampling mes individuals per stratum can be performed to identify the final sample.  If the ix argument is TRUE, then we can simply extract the indicies from the out object.  Note, ix=TRUE only works when raw data is supplied to the mes function (see ?mes for additional details). 
